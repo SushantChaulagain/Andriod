@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -55,17 +54,16 @@
         android:layout_marginTop="16dp"/>
 
     <!-- Gender Spinner -->
-
-    <!-- Submit Button -->
     <Spinner
         android:id="@+id/genderSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/genderLabel"
-        android:layout_marginStart="18dp"
         android:layout_toEndOf="@id/genderLabel"
-        android:prompt="@string/spinner_prompt" />
+        android:layout_alignBaseline="@id/genderLabel"
+        android:layout_marginStart="16dp"
+        android:prompt="@string/spinner_prompt"/>
 
+    <!-- Submit Button -->
     <Button
         android:id="@+id/submitButton"
         android:layout_width="wrap_content"

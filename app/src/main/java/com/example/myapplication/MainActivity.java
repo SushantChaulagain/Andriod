@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -40,13 +41,13 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = Email_ET.getText().toString();
-                String password = Pass_ET.getText().toString();
                 String gender = spn_gen.getSelectedItem().toString();
-                Toast.makeText(MainActivity.this, "Email :" + email + "Password :" + password + "gender :" + gender, Toast.LENGTH_SHORT).show();
+                String typedValue = String.valueOf(Email_ET.getText());
+                Intent myintent = new Intent(MainActivity.this, WelcomeScreen.class);
+                myintent.putExtra("bca",typedValue);
+                myintent.putExtra("gender",gender);
+                startActivity(myintent);
             }
         });
-
-
-    };
+    }
 }
